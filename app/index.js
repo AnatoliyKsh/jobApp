@@ -1,28 +1,5 @@
-import { View , ScrollView, SafeAreaView} from 'react-native'
-import {useState} from "react";
-import {Stack, useRouter} from "expo-router";
-import {COLORS, icons , images, SIZES} from "../constants";
-import {Nearbyjobs, Popularjobs, ScreenHeaderBtn, Welcome} from '../components'
+import { Redirect } from "expo-router";
 
-const  Home =()=>{
-    const router = useRouter()
-    return(
-        <SafeAreaView>
-            <Stack.Screen
-            options={{
-                headerStyle:{backgroundColor:COLORS.lightWhite
-            } , headerShadowVisible: false,
-                headerLeft:()=>(<ScreenHeaderBtn iconUrl={images.menu} dimension="60%"/>),
-                headerRight:()=>(<ScreenHeaderBtn iconUrl={images.profile} dimension="100%"/>),
-                headerTitle: ""
-
-            }}
-            />
-            <Welcome/>
-            <Popularjobs/>
-            <Nearbyjobs/>
-
-        </SafeAreaView>
-    )
- }
- export default Home 
+export default function Index() {
+    return <Redirect href="/home" />;
+}

@@ -4,10 +4,7 @@
     "web": {
       "bundler": "metro"
     },
-    "plugins": [
-      "expo-router"
-    ],
-    "name": "untitled1",
-    "slug": "untitled1"
+    "name": "jobsift",
+    "slug": "jobsift"
   }
 }

@@ -1,4 +1,4 @@
-import profile from "../assets/images/adaptive-icon.jpg";
+import profile from "../assets/images/user.jpg";
 
 export default {
   profile,
