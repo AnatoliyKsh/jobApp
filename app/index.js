@@ -1,9 +1,28 @@
-import { View , Text} from 'react-native'
- const  Home =()=>{
+import { View , ScrollView, SafeAreaView} from 'react-native'
+import {useState} from "react";
+import {Stack, useRouter} from "expo-router";
+import {COLORS, icons , images, SIZES} from "../constants";
+import {Nearbyjobs, Popularjobs, ScreenHeaderBtn, Welcome} from '../components'
+
+const  Home =()=>{
+    const router = useRouter()
     return(
-        <View>
-            <Text>Home </Text>
-        </View>
+        <SafeAreaView>
+            <Stack.Screen
+            options={{
+                headerStyle:{backgroundColor:COLORS.lightWhite
+            } , headerShadowVisible: false,
+                headerLeft:()=>(<ScreenHeaderBtn iconUrl={images.menu} dimension="60%"/>),
+                headerRight:()=>(<ScreenHeaderBtn iconUrl={images.profile} dimension="100%"/>),
+                headerTitle: ""
+
+            }}
+            />
+            <Welcome/>
+            <Popularjobs/>
+            <Nearbyjobs/>
+
+        </SafeAreaView>
     )
  }
- export default Home
+ export default Home 
